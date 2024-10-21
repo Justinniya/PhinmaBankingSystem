@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .blur{
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top:0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .check{
+        width: 500px;
+        height: 400px;
+        background: beige;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .check div{
+        display: flex;
+        width: 200px;
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(to right,gold,gray,gold,gray,gold)1;
+        
+    }
+
+    .check button{
+        position:fixed;
+        top:110px;
+        left: 390px;
+        background: red;
+    }
+
+</style>
+<body>
+    <div class="blur">
+        <div class="check">
+            <button>x</button>
+            <div><p class="leftt">BALANCE:</p><p class="rightt">  1234</p></div>
+            <div><p class="leftt">PAID:</p><p class="rightt">11526</p></div>
+            <div><p class="leftt">TOTAL PAYMENT:</p><p class="rightt">24,000</p></div>
+
+
+        </div>
+    </div>
+</body>
+</html>

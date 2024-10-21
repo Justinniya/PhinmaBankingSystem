@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin</title>
+
+    <!-- Google Font -->
+   
+
+    
+
+    <style>
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px; /* Adjust font size as needed */
+        position: relative;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    th:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background-color: #ddd; /* Adjust color as needed */
+    }
+    /* Responsive Table */
+    @media (max-width: 600px) {
+        table {
+            border: 0;
+        }
+        table thead {
+            display: none;
+        }
+        table, table tbody, table tr, table td {
+            display: block;
+            width: 100%;
+        }
+        table tr {
+            margin-bottom: 15px;
+        }
+        table td {
+            text-align: right;
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+        table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 10px;
+            text-align: left;
+        }
+    }
+    .header__logo a{
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__menu ul{
+        display: flex;
+        justify-content: center;
+    }
+    .header__menu ul li{
+        margin-right: 30px;
+        list-style: none;
+    }
+    .header__menu ul li a{
+        color: black;
+        text-decoration: none;
+    }
+    .header__logo img{
+        border-radius: 50%;
+        border:1px solid black;
+        
+    }
+</style>
+</head>
+
+<body style="background-color: whitesmoke;">
+
+<header>
+<div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.php"><img src="../img/jessa.jpg" alt="" width="75px" height="75px"></a>
+                        <br>
+                        <a href="./index.php">JP Banking</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="../admin/index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;|</li> 
+                            
+                            <li><a href="../admin/orders.html">Orders</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+</header>
+
+<table>
+    <thead>
+
+        <tr>
+            <th >Info</th>
+            <th ></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in cashins %}
+        <tr>
+            <td>{{i}}</td>
+            <td><a href="/delete/{{i[0]}}">delete</a></td>
+      
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</body>

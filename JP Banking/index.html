@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Banking</title>
+
+<style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(img/bank3.png);
+    background-size: cover; 
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    background-color: beige;
+    width: 100%;
+    margin-top: 0;
+}
+.nav img{
+    border: 1px solid;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 3px;
+    border-radius: 50%;
+    
+}
+.nav h4 a{
+    text-decoration: none;
+    color: black;
+}
+.nav ul {
+    padding-top: 5px;
+    display: flex;
+    margin-left: auto; 
+    margin-right: 50px; 
+}
+
+.nav ul li {
+    padding-right: 30px;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.content h3{
+    padding-top: 200px;
+    padding-left: 325px;
+}
+.content button{
+    margin-left: 240px;
+    width: 250px;
+    background-color: brown;
+    height: 40px;
+    
+}
+.content button a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cc{
+    display: none;
+        }
+
+        .cc form select{
+            width: 180px;
+            
+        }
+        .container1{
+            background: #F5F5DB;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 50px;
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 20px black;
+        }
+        .container1 div{
+            margin: 40px 0;
+        }
+
+        .container1 div input{
+            border: none;
+            border-bottom: 2px solid black;
+            float: right;
+            background: #F5F5DB;
+        }
+        .container1 button{
+            position:absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        }
+
+        .container1 button:hover{
+            padding: 20px;
+            background-color: red;
+        }
+
+.log{
+    display: none;
+}
+.container2{
+    background: #F5F5DB;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 50px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 20px black;
+}
+.container2 div{
+    margin: 40px 0;
+    text-align: center;
+    display: block;
+}
+        
+.container2 div input{
+    border: none;
+    border-bottom: 2px solid black;
+    float: right;
+    background: #F5F5DB;
+}
+.container2 div input[type="email"],
+.container2 div input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.container2 button{
+    position:absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    }
+        
+.container2 button:hover{
+    padding: 20px;
+    background-color: red;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: beige;
+    padding: 10px 0;
+}
+</style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="nav">
+            <a href="index.html"><img src="img/jessa.jpg" width="50x" height="50px"></a>
+            <h4><a href="index.html">JESSA</a></h4> 
+            
+        </div>
+    </div>
+ 
+    <div class="row">
+        <div class="content">
+            <h3>Welcome</h3>
+            <button><a onclick="login()">Login</a></button><p>
+            <button><a onclick="register()">Register</a></button>
+        </div>
+    </div>
+
+
+    <div class="log">  
+        <button onclick="login()">X</button> 
+        <form action="/submit-form">
+
+            
+
+            <div>
+                <label>Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label>Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <center>
+                <input type="submit">
+            </center>            
+        </form>
+    </div>
+
+    
+    <div class="cc">  
+        <button onclick="register()">X</button> 
+        <form action="/submit-form">
+
+            <div>
+                <label>Name :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label>Studentnumber:</label>
+                <input type="text" id="name" name="studentnumber" required>
+            </div>
+            <div>
+                <label>Course:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="dropdown"> 
+                    <option value="BS INFORMATION TECHNOLOGY" id="" name="">BS INFORMATION TECHNOLOGY</option>
+                    <option value="BS ACCOUNTING" id="" name="">BS ACCOUNTING</option>
+                    <option value="BS ADMINISTRATION" id="" name="">BS ADMINISTRATION</option>
+                    <option value="BS HOSPITALITY MANAGEMENT" id="" name="">BS HOSPITALITY MANAGEMENT</option>
+                    <option value="BS CRIMININOLOGY" id="" name="">BS CRIMININOLOGY</option>
+                </select>
+            </div>
+            <div>
+                <label>Year Level:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="dropdown">
+                    <option value="1st yr" id="" name="">1st yr</option>
+                    <option value="2nd yr" id="" name="">2nd yr</option>
+                    <option value="3rd yr" id="" name="">3rd yr</option>
+                </select>
+            </div>
+            <div>
+                <label>Scholarship:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="dropdown">
+                    <option value="None" id="" name="">None</option>
+                    <option value="20%" id="" name="">20%</option>
+                    <option value="50%" id="" name="">50%</option>
+                    <option value="100%" id="" name="">100%</option>
+                </select>
+            </div>
+            
+
+            <div>
+                <label>Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label>Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <center>
+                <input type="submit">
+            </center>            
+        </form>
+    </div>
+
+    <script>
+        function register(){
+            var show = document.querySelector(".cc");
+            show.classList.toggle("container1");
+        }
+    </script>
+
+    <script>
+        function login(){
+            var show = document.querySelector(".log");
+            show.classList.toggle("container2");
+        }
+    </script>
+    <footer>
+        <span>@All rights reserved JP Banking 2024</span>
+    </footer>
+</body>
+</html>

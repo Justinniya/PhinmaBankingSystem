@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Banking</title>
+
+<style>
+    body {
+        background-image: url(img/bg2.png);
+        font-family: sans-serif;
+        margin: 0;
+        background-size: cover; 
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .nav {
+        display: flex;
+        background-color: beige;
+        width: 100%;
+        margin-top: 0;
+    }
+    .nav img{
+        border: 1px solid;
+        margin-left: 20px;
+        margin-right: 5px;
+        margin-top: 3px;
+        border-radius: 50%;
+        
+    }
+    .nav h4 a{
+        text-decoration: none;
+        color: black;
+        margin-right: 1100px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .container a{
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+    .profile{
+        margin-top: 40px;
+        background-color: whitesmoke;
+        margin-left: 130px;
+        height: 380px;
+        border-radius: 30px;
+        width: 30%;
+        text-align: center;
+        padding-top: 30px;
+        
+    }
+    
+    .profile h4{
+        padding-top: 10px;
+    }
+    .profile_2{
+        margin-top: 40px;
+        background-color: whitesmoke;
+        margin-left: 70px;
+        height: 380px;
+        border-radius: 30px;
+        width: 30%;
+        text-align: center;
+        padding-top: 30px;
+        margin-right: 200px;
+        
+    }
+    
+    .profile_2 form input[type="text"],
+    .profile_2 form input[type="number"]{
+        height: 30px;
+        width: 80%;
+        padding: 8px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: beige;
+        padding: 10px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="row">
+        <div class="nav">
+            <a href="index.html"><img src="img/jessa.jpg" width="50px" height="50px"></a>
+            <h4><a href="index.html">JESSA</a></h4> 
+            
+            <!--<img src="">
+            -->
+            <h3>Icon</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <a href="index.html"><i><</i></a>
+            <div class="profile">
+                
+                <h4>Name: </h4>
+                <h4>Student ID:</h4>
+                <h4>Course:</h4>
+                <h4>Year Level:</h4>
+                <h4>Scholarship:</h4>
+            </div>
+                
+            <div class="profile_2">
+                <form action="" method="">
+                    <label>Teller No.</label><br>
+                    <input type="number" name="number" required><p></p>
+
+                    <label>Payment Method</label><br>
+                    
+                    <input type="radio" id="GCASH" name="payment" value="GCASH" required>
+                    <label for="GCASH">GCASH</label>
+                    <input type="radio" id="PAYMAYA" name="payment" value="PAYMAYA">
+                    <label for="PAYMAYA">PAYMAYA</label><p></p>
+
+                    <label>Balance</label><br>
+                    <input type="text" name="balance" value="1234213" readonly><p></p>
+
+                    <label>Payment</label><br>
+                    <input type="text" name="pay" required><p></p>
+                    <input type="submit" name="payment" value="Proceed to Payment">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <span>@All rights reserved JP Banking 2024</span>
+    </footer>
+</body>
+</html>

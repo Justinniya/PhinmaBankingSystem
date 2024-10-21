@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+<style>
+body {
+    
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(img/bank3.png);
+    background-size: cover; 
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    background-color: beige;
+    width: 100%;
+    margin-top: 0;
+}
+.nav img{
+    border: 1px solid;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 3px;
+    border-radius: 50%;
+    
+}
+.nav h4 a{
+    text-decoration: none;
+    color: black;
+}
+.nav ul {
+    padding-top: 5px;
+    display: flex;
+    margin-left: auto; 
+    margin-right: 50px; 
+}
+
+.nav ul li {
+    padding-right: 30px;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.container{
+    position: relative;
+    background-color: beige;
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    margin-left: 200px;
+    margin-top: 200px;
+    border-radius: 30px;
+}
+.container form{
+    display: block;
+    text-align: center; 
+    margin-bottom: 5px; 
+}
+.container form input[type="email"],
+.container form input[type="password"] {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.container form input[type="submit"]{
+    width: 150px;
+    height: 30px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: beige;
+    padding: 10px 0;
+}
+</style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="nav">
+            <a href="index.html"><img src="static/img/jessa.jpg" width="50x" height="50px"></a>
+            <h4><a href="index.html">JESSA</a></h4> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">People</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <form action="" method="">
+                <label>Email</label><br>
+                <input type="email" name="email" required></p>
+
+                <label>Password</label><br>
+                <input type="password" name="password" required></p>
+
+                <input type="submit" name="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <span>@All rights reserved JP Banking 2024</span>
+    </footer>
+</body>
+</html>
